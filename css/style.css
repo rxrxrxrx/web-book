@@ -1,0 +1,608 @@
+:root {
+  --blue: #0065fc;
+  --light-blue: #deebff;
+  --grey: #f2f2f2;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+}
+body {
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  margin: auto;
+  max-width: 1400px;
+}
+
+header,
+body,
+main,
+footer,
+nav {
+  padding: 0 20px;
+}
+.contenu-cartes a .lien-carte {
+  flex: 0 0 29%;
+}
+.bloc-hebergements {
+  flex-wrap: nowrap;
+}
+.lien-cartes-populaires img {
+  width: 45%;
+}
+
+#contenu-footer {
+  padding: 2rem 2rem 3rem;
+}
+
+#nav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+#nav ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  font-weight: 900;
+}
+#nav ul > li {
+  display: inline;
+  padding: 40px 30px;
+  border-top: 2px solid transparent;
+}
+#nav ul > li:hover {
+  border-top: 2px solid var(--blue);
+}
+
+#nav ul > li:hover a {
+  color: var(--blue);
+}
+#nav ul > li a {
+  color: black;
+  font-weight: 400;
+  text-decoration: none;
+}
+.logo {
+  align-self: center;
+}
+
+#bloc-recherches {
+  margin-bottom: 20px;
+}
+.titre-bloc-recherches {
+  margin-bottom: 20px;
+}
+.titre-bloc-recherches h1 {
+  font-family: "Raleway", sans-serif;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.titre-bloc-recherches p {
+  margin: 0;
+}
+#titre-filtre {
+  padding-right: 20px;
+}
+::placeholder {
+  font-weight: bolder;
+}
+.fonction-recherche {
+  display: flex;
+  margin-bottom: 20px;
+}
+.fonction-recherche > span {
+  background-color: var(--grey);
+  padding: 10px 20px;
+  border-radius: 15px 0 0 15px;
+}
+.fonction-recherche .champ-texte-recherche {
+  font-family: "Raleway", sans-serif;
+  padding: 10px;
+  border: none;
+  border-top: 1px solid var(--grey);
+  border-bottom: 1px solid var(--grey);
+  width: 250px;
+  min-width: 100px;
+}
+.fonction-recherche .bouton-rechercher {
+  font-family: "Raleway", sans-serif;
+  background-color: var(--blue);
+  border: none;
+  border-radius: 0 15px 15px 0;
+  color: white;
+  padding: 15px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.bloc-filtres {
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+.bloc-filtres .filtres:hover {
+  background-color: #deebff;
+  border-radius: 25px;
+}
+.fonction-recherche .bouton-rechercher i {
+  display: none;
+}
+
+.bloc-filtres ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.bloc-filtres ul > li {
+  display: inline;
+}
+.bloc-filtres ul .titre-filtre {
+  font-family: "Raleway", sans-serif;
+}
+.bloc-filtres .filtres {
+  padding: 0 10px 0 0;
+  display: flex;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 25px;
+  align-items: center;
+  border: 3px solid var(--grey);
+}
+
+.bloc-filtres .filtres i {
+  z-index: 2;
+  color: var(--blue);
+  transform: translateX(calc(1rem - 2px));
+}
+.bloc-filtres .filtres input[type="checkbox"] {
+  display: none;
+}
+.bloc-filtres .filtres input[type="checkbox"] + label {
+  margin-left: 5px;
+  font-family: "Raleway", sans-serif;
+  color: black;
+  padding: 10px 15px 10px 45px;
+}
+
+.bloc-informations {
+  display: flex;
+  align-items: center;
+}
+.bloc-informations span {
+  font-size: small;
+  color: var(--blue);
+  padding: 7px 11px;
+  text-align: center;
+  margin-right: 10px;
+  border: 1px solid #d9d9d9;
+  border-radius: 50%;
+  position: relative;
+}
+.bloc-informations p {
+  font-weight: 400;
+  opacity: 70%;
+}
+
+.bloc-filtres .filtres :hover {
+  background: var(--light-blue);
+}
+#hebergements {
+  margin-bottom: 100px;
+}
+.bloc-hebergements {
+  display: flex;
+  gap: 20px;
+}
+.contenu-hebergements {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--grey);
+  border-radius: 20px;
+  padding: 15px;
+  flex: 1 1 66%;
+}
+.contenu-hebergements h2 {
+  font-family: "Raleway", sans-serif;
+  margin: 0 0 20px 0;
+}
+#activites,
+h2 {
+  margin-bottom: 10px;
+}
+
+.contenu-hebergements .afficher-plus {
+  text-decoration: unset;
+  font-family: "Raleway", sans-serif;
+  color: black;
+}
+.contenu-cartes {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  flex-grow: 1;
+  gap: 10px 10px;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.lien-carte {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 29%;
+  background-color: white;
+  border-radius: 1rem;
+  padding: 5px;
+  box-shadow: 0 5px 25px 0px rgb(0, 0, 0, 0.2);
+}
+.lien-carte img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+  height: 1px;
+  flex-grow: 1;
+}
+.lien-carte .corps-carte {
+  padding: 8px;
+}
+.corps-carte .titre-carte {
+  font-family: "Raleway", sans-serif;
+  margin: 0 0 5px 0;
+}
+.corps-carte .texte-carte {
+  margin: 0;
+  flex-grow: 1;
+}
+.corps-carte .etoiles {
+  text-decoration: none;
+}
+.corps-carte .etoiles span {
+  font-size: 7px;
+}
+.checked {
+  color: var(--blue);
+}
+.uncheked {
+  color: var(--grey);
+}
+.entete-populaires span {
+  color: var(--blue);
+}
+.les-plus-populaires {
+  background-color: var(--grey);
+  flex: 1 1 33%;
+  border-radius: 20px;
+  padding: 20px;
+}
+.les-plus-populaires .entete-populaires {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 15px 0;
+  align-items: center;
+}
+.les-plus-populaires .entete-populaires h2 {
+  font-family: "Raleway", sans-serif;
+  margin: 0;
+}
+
+.contenu-cartes-populaires {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-between;
+}
+.lien-cartes-populaires {
+  display: flex;
+  background-color: white;
+  border-radius: 10px;
+  padding: 3px;
+  flex: 0 0 29%;
+  box-shadow: 0 5px 25px 0px rgb(0, 0, 0, 0.2);
+}
+.lien-cartes-populaires img {
+  width: 35%;
+  object-fit: cover;
+  border-radius: 10px 0 0 10px;
+  aspect-ratio: 1 / 1;
+}
+.lien-cartes-populaires .corps-carte {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 5px 5px 5px 10px;
+}
+
+#bouton-activites {
+  margin-bottom: 25px;
+}
+#bouton-activites h2 {
+  font-family: "Raleway", sans-serif;
+  margin: 0 0 15px 0;
+}
+
+#activites {
+  margin-bottom: 30px;
+}
+.contenu-activites {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+#activites-gauche,
+#activites-droite {
+  display: flex;
+  flex: 1;
+  gap: 20px;
+  height: 100%;
+}
+#activites-gauche .lien-activites,
+#activites-droite .lien-activites {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: 100%;
+  padding: 0;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 5px 25px 0px rgb(0 0 0 / 20%);
+}
+#activites-gauche .lien-activites img,
+#activites-droite .lien-activites img {
+  border-radius: 10px 10px 0 0;
+  min-height: 400px;
+}
+.lien-carte {
+  padding: 0;
+}
+#activites-gauche .lien-carte:first-child {
+  flex: 65%;
+}
+#activites-gauche .lien-carte:last-child {
+  flex: 35%;
+}
+
+#activites-droite .lien-carte:first-child {
+  flex: 50%;
+}
+#activites-droite .lien-carte:last-child {
+  flex: 50%;
+}
+#activites-gauche .lien-activites img,
+#activites-droite .lien-activites img,
+.lien-carte img {
+  flex-grow: 1;
+  height: 1px;
+  width: 100%;
+  object-fit: cover;
+}
+#activites-gauche .lien-activites .corps-carte,
+#activites-droite .lien-activites .corps-carte,
+.lien-carte .corps-carte {
+  padding: 10px;
+  flex-grow: unset;
+}
+
+#contenu-footer {
+  display: flex;
+  background-color: var(--grey);
+  padding: 20px 40px 30px;
+}
+#contenu-footer .bloc-footer {
+  flex: 33.33%;
+}
+#contenu-footer .bloc-footer h3 {
+  font-family: "Raleway", sans-serif;
+  margin-top: 0;
+}
+#contenu-footer .bloc-footer .contenu-bloc-footer {
+  display: flex;
+  flex-direction: column;
+}
+#contenu-footer .bloc-footer .contenu-bloc-footer a {
+  color: black;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+
+.hidden-link {
+  color: unset;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 991px) {
+  .contenu-hebergements {
+    height: fit-content;
+  }
+  .bloc-hebergements .contenu-cartes .lien-carte {
+    flex: 1 1 45%;
+  }
+  .bloc-hebergements .contenu-cartes .lien-carte img {
+    height: 10rem;
+  }
+  .contenu-activites {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-bottom: 30px;
+    font-size: 80%;
+  }
+
+  .bloc-filtres .filtres input[type="checkbox"] + label {
+    padding: 10px 15px 10px 15px;
+  }
+  #activites-gauche .lien-activites,
+  #activites-gauche .lien-carte,
+  #activites-droite .lien-activites,
+  #activites-droite .lien-carte {
+    flex: 12rem;
+  }
+
+  #activites-gauche .lien-activites img,
+  #activites-droite .lien-activites img {
+    min-height: 300px;
+  }
+  .bloc-hebergements {
+    flex-wrap: wrap;
+  }
+
+  .bloc-filtres ul {
+    gap: 10px;
+  }
+  .bloc-filtres .filtres {
+    font-size: 85%;
+  }
+
+  .contenu-cartes-populaires {
+    flex-direction: row;
+  }
+  .lien-cartes-populaires img {
+    aspect-ratio: unset;
+  }
+  .les-plus-populaires {
+    padding-bottom: 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  header,
+  body,
+  main,
+  footer,
+  nav {
+    padding: 0;
+  }
+  #nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin-bottom: 2rem;
+  }
+  #nav ul {
+    width: 100%;
+    text-align: center;
+  }
+  #nav ul > li {
+    padding: 1rem 2.5rem;
+    flex: 1;
+    box-shadow: inset 0 -20px 0px -17px var(--grey);
+  }
+  #nav ul > li:hover {
+    box-shadow: inset 0 -20px 0px -17px var(--blue);
+    border-top: 2px solid transparent;
+  }
+  .logo {
+    padding-top: 20px;
+  }
+  #activites-gauche .lien-activites img,
+  #activites-droite .lien-activites img {
+    min-height: 250px;
+  }
+  #bloc-recherches {
+    padding: 0 1rem;
+  }
+  .fonction-recherche {
+    justify-content: center;
+  }
+  .bloc-filtres {
+    flex-direction: column;
+  }
+  .bloc-filtres ul {
+    display: flex;
+
+    gap: 1rem;
+  }
+  .titre-bloc-recherches h1 {
+    font-size: 1.5rem;
+  }
+
+  .fonction-recherche .bouton-rechercher {
+    padding: 1rem 1.25rem;
+    border-radius: 1rem;
+  }
+  .fonction-recherche .bouton-rechercher i {
+    display: block;
+  }
+  .fonction-recherche .bouton-rechercher span {
+    display: none;
+  }
+  .bloc-filtres .titre-filtre {
+    width: 100%;
+  }
+  .bloc-filtres .filtres {
+    min-width: 180px;
+  }
+
+  .bloc-hebergements .contenu-hebergements {
+    border-radius: unset;
+    padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+  }
+  .bloc-hebergements {
+    flex-wrap: wrap-reverse;
+  }
+
+  .bloc-hebergements .contenu-cartes {
+    display: block;
+    flex-direction: column;
+  }
+
+  .bloc-hebergements .contenu-cartes .lien-carte {
+    min-height: 250px;
+    flex: none;
+    margin-bottom: 1rem;
+  }
+  .bloc-hebergements .contenu-cartes .lien-carte img {
+    height: 1px;
+    flex-grow: 1;
+  }
+  .bloc-hebergements .contenu-cartes .lien-carte .corps-carte {
+    flex-grow: unset;
+  }
+  .bloc-hebergements .les-plus-populaires {
+    border-radius: unset;
+    padding: 2rem 1.5rem;
+    background: var(--grey);
+  }
+  .bloc-hebergements .contenu-hebergements {
+    background-color: unset;
+  }
+  .contenu-cartes-populaires {
+    flex-direction: column;
+  }
+  #activites-gauche,
+  #activites-droite {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+  }
+  .bloc-hebergements .contenu-cartes,
+  #activites .contenu-activites,
+  #activites .contenu-activites #activites-gauche,
+  #activites .contenu-activites #activites-gauche,
+  #activites .contenu-activites #activites-droite,
+  #activites .contenu-activites #activites-droite {
+    gap: 1rem;
+  }
+  .contenu-activites {
+    display: block;
+  }
+
+  .lien-cartes-populaires img {
+    aspect-ratio: 1/1;
+  }
+  .bloc-hebergements .les-plus-populaires .contenu-cartes-populaires {
+    gap: 0.75rem;
+  }
+  #activites h2 {
+    padding-left: 20px;
+  }
+  #bouton-activites {
+    padding: 2rem 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  #contenu-footer {
+    display: block;
+    padding: 2rem 1.5rem 2rem;
+  }
+}
